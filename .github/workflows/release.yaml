@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ui-build
-          path: out/
+          path: out
 
   release:
     needs: build
