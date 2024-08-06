@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ui-build
-          path: out
+          path: ./out
 
   release:
     needs: build
@@ -73,6 +73,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.github_release.outputs.upload_url }}
-          asset_path: out/marahuyo-ui.${{ steps.version.outputs.current-version }}.min.css
+          asset_path: ./out/marahuyo-ui.${{ steps.version.outputs.current-version }}.min.css
           asset_name: marahuyo-ui.${{ steps.version.outputs.current-version }}.min.css
           asset_content_type: text/css
