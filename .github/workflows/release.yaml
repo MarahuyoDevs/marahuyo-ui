@@ -30,8 +30,7 @@ jobs:
           path: ./out
 
   release:
-    needs: build
-    if: github.event_name == 'workflow_dispatch'
+    needs: build 
      
     runs-on: ubuntu-latest
     permissions:
@@ -64,7 +63,7 @@ jobs:
         with:
           tag_name: v${{ steps.version.outputs.current-version }}
           release_name: Release v${{ steps.version.outputs.current-version }}
-          draft: true
+          draft: false
           prerelease: true
 
       - name: Upload Release Assets
