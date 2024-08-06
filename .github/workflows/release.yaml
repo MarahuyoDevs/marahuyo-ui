@@ -49,7 +49,7 @@ jobs:
 
       - name: Get version from package.json
         id: version
-        run: echo $(cat ${PACKAGE_JSON_PATH}/package.json | jq '.version' | tr -d '"') >> $GITHUB_OUTPUT
+        run: echo $(cat ./package.json | jq '.version' | tr -d '"') >> $GITHUB_OUTPUT
 
       - name: Download Artifact
         uses: actions/download-artifact@v2
