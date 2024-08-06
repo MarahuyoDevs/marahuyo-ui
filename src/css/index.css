@@ -1,0 +1,11 @@
+/* Core Components for the system */
+@import "colors.css";
+@import "typography.css";
+@import "components/index.css";
+
+/* Tailwindcss */
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+

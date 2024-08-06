@@ -1,0 +1,12 @@
+{
+  "name": "md-ui-system",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tailwindcss": "^3.4.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
