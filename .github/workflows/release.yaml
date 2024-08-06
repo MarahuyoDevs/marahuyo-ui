@@ -73,6 +73,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.github_release.outputs.upload_url }}
-          asset_path: ./out/marahuyo-ui.${{ steps.version.outputs.current-version }}.min.css
+          asset_path: /home/runner/work/marahuyo-ui/marahuyo-ui/marahuyo-ui.${{ steps.version.outputs.current-version }}.min.css
           asset_name: marahuyo-ui.${{ steps.version.outputs.current-version }}.min.css
           asset_content_type: text/css
