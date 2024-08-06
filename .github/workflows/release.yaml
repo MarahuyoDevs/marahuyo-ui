@@ -40,7 +40,7 @@ jobs:
       repository-projects: write
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -58,7 +58,7 @@ jobs:
 
       - name: Create Github Release
         id: github_release
-        uses: actions/create-release@v3
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
